@@ -20,9 +20,10 @@
   comment all functions, types, enumeration values, fields, members, and
   methods, even for private or unexported code and test code. Comment in a style
   that is idiomatic for the language in which you're writing.
-- Comment code liberally, even tests. Divide code blocks into small
+- Comment code liberally, even tests. Divide long code blocks into small
   comprehensible chunks (separated by empty lines), with each chunk preceded by
-  a comment describing its function.
+  a comment describing its function. Small, self-evident code blocks can exist
+  without chunking or comments.
 - Don't include empty lines between members in type declarations.
 - Try to avoid high cyclomatic complexity.
 - Avoid large memory allocations unless absolutely required.
