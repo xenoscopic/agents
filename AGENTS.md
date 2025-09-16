@@ -1,19 +1,31 @@
 # Code style
 - Try hard to write lines less than 80 characters in length. Exceptions can be
   made for comment lines or string literals that would exceed 80 characters due
-  to long URLs or other content, and for code that would be more readable when
-  allowed to exceed 80 characters.
+  to long URLs or other content. For code lines, readability is more important
+  than length restrictions, so consider 100 characters a soft limit, but still
+  just a guideline.
 - Try to keep files to less than 1000 lines in length, but do what makes sense
-  for the situation; test code files may often exceed this limit.
+  for the situation. For example, test code files, Markdown files, or code with
+  large static tables may often exceed 1000 lines.
+- Try not to split conditional expressions across multiple lines in control flow
+  structures such as `for`, `if`, `else if`, and `while`. Instead, extract
+  complex expressions into separate variables.
+- When splitting function and method calls across multiple lines with no
+  arguments on the same line at the opening parenthesis, put the corresponding
+  closing parenthesis on its own line.
 - Always end files with a trailing newline.
-- Try to use only ASCII characters in comments unless essential.
+- Use only ASCII characters in comments unless non-ASCII characters are
+  essential.
 - Only comment in full sentences, always ending sentences with a period. Always
-  comment all functions, types, fields, and methods, even for private,
-  unexported, or test code. Do so in a style that is idiomatic for the language
-  in which you're writing.
-- Comment code liberally, even tests. Segment code in function and method blocks
-  into chunks that are prefixed by comments describing their function.
+  comment all functions, types, enumeration values, fields, members, and
+  methods, even for private or unexported code and test code. Comment in a style
+  that is idiomatic for the language in which you're writing.
+- Comment code liberally, even tests. Divide code blocks into small
+  comprehensible chunks (separated by empty lines), with each chunk preceded by
+  a comment describing its function.
+- Don't include empty lines between members in type declarations.
 - Try to avoid high cyclomatic complexity.
+- Avoid large memory allocations unless absolutely required.
 - Opt to use functionality provided by a language's standard library rather than
   writing it yourself.
 - Don't modify existing code unless it's necessary to complete your task.
