@@ -8,8 +8,31 @@
   example, test code files, Markdown files, or code with large static tables may
   justifiably exceed 1000 lines.
 - Try not to split conditional expressions across multiple lines in control flow
-  structures such as `for`, `if`, `else if`, and `while`. Instead, extract
-  complex expressions into separate variables.
+  structures such as `for`, `if`, `else if`, and `while`. Complex conditionals
+  are acceptable, but if they reach the length where it's necessary to wrap the
+  control flow structure to stay within line length guidelines, then consider
+  extracting complex expressions into separate, well-named variable definitions
+  (in which case wrapping is fine), especially if doing so better expresses
+  intent. Here are some examples in Go:
+  ```go
+  // Don't do this:
+  if cond1 && cond2 ||
+      (cond4 || cond5) {
+      // ...
+  }
+
+  // Instead, do this:
+  myComplexConditional := cond1 && cond2 ||
+    (cond4 || cond5)
+  if myComplexConditional {
+      // ...
+  }
+
+  // Some complexity in conditionals is also acceptable, for example:
+  if cond1 && (dynamicCond2() || dynamicCond3() > x) {
+    // ...
+  }
+  ```
 - When splitting function and method calls across multiple lines with no
   arguments on the same line at the opening parenthesis, put the corresponding
   closing parenthesis on its own line. Depending on the language, you may or may
