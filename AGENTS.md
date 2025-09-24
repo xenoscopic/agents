@@ -60,7 +60,8 @@
              arg3, arg4)
   ```
 - Always use Unix-style line endings, regardless of platform, unless the code
-  you're writing requires Windows-style line endings (e.g. a `.bat` script).
+  you're writing requires Windows-style line endings (e.g. a `.bat` script) or
+  you're updating existing code that uses non-Unix-style line endings.
 - Always end files with a trailing newline.
 - Opt to indent using spaces, unless the language standard is tabs (e.g. when
   writing Go or a Makefile) or when trying to match existing code. When
