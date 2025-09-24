@@ -62,6 +62,10 @@
 - Always use Unix-style line endings, regardless of platform, unless the code
   you're writing requires Windows-style line endings (e.g. a `.bat` script).
 - Always end files with a trailing newline.
+- Opt to indent using spaces, unless the language standard is tabs (e.g. when
+  writing Go or a Makefile) or when trying to match existing code. When
+  indenting with spaces, prefer 4 spaces per indentation level, but match any
+  existing style.
 - Use only ASCII characters in comments unless non-ASCII characters are
   essential.
 - Only comment in full sentences, always ending sentences with a period. Comment
