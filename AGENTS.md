@@ -59,6 +59,8 @@
   myFunction(arg1, arg2,
              arg3, arg4)
   ```
+- Always use Unix-style line endings, regardless of platform, unless the code
+  you're writing requires Windows-style line endings (e.g. a `.bat` script).
 - Always end files with a trailing newline.
 - Use only ASCII characters in comments unless non-ASCII characters are
   essential.
