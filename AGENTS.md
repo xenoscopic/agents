@@ -5,7 +5,7 @@
   is more important than length restrictions, so consider 100 characters a soft
   limit, but still just a guideline.
 - Try to keep files to less than 1000 lines in length, unless justified. For
-  example, test code files, Markdown files, or code with large static tables may
+  example: test code files, Markdown files, or code with large static tables may
   justifiably exceed 1000 lines.
 - Always use Unix-style line endings, regardless of platform, unless the code
   you're writing requires Windows-style line endings (e.g. a `.bat` script) or
